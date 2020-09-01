@@ -1,60 +1,80 @@
 #include "LINUXComponentsFactory.h"
 #include "WINDOWSComponentsFactory.h"
 #include "MACComponentsFactory.h"
+#include "ComponentsFactory.h"
 
-#include <vector>
+#include <fstream>
+#include <string>
 using namespace std;
 
-int main()
-{
-	// Init factories
-	LINUXComponentsFactory   LINUXFactory;
-	MACComponentsFactory     MACFactory;
-	WINDOWSComponentsFactory WINDOWSFactory;
+// OS - Operating system
+// GUI - Graphical user interface
+
+enum class OS {
+	LINUX,
+	WINDOWS,
+	MAC,
+	NONE
+};
+
+struct GUI {
+	IButton* button;
+	IMenu  * menu;
+	ICursor* cursor;
+	IWindow* window;
+};
+
+OS ConvertToEnum(string os) {
+	if (os == "LINUX")
+		return OS::LINUX;
+
+	else if (os == "WINDOWS")
+		return OS::WINDOWS;
+
+	else if (os == "MAC")
+		return OS::MAC;
+
+	else
+		return OS::NONE;
+}
+
+string ReadFromFile(string filename) {
+	ifstream file(filename);
+	if (!file)
+		return "error";
+		
+	string os;
+	getline(file, os);
+
+	return os;
+}
+
+ComponentsFactory* DetectFactory(OS os) {
+	switch (os) {
+	case OS::NONE:
+	case OS::MAC:
+		return new MACComponentsFactory();
+
+	case OS::WINDOWS:
+		return new WINDOWSComponentsFactory();
+
+	case OS::LINUX:
+		return new LINUXComponentsFactory();
+	}
+}
+
+GUI CreateGUI(ComponentsFactory* factory) {
+	return GUI{ factory->CreateButton(), factory->CreateMenu(), factory->CreateCursor(), factory->CreateWindow() };
+}
+
+int main() {
 	
-	vector<ComponentsFactory*> factories {&LINUXFactory, &MACFactory, &WINDOWSFactory};
+	GUI gui = CreateGUI(DetectFactory(ConvertToEnum(ReadFromFile("os.txt"))));
 
-	// Init components
-	vector<IButton*> buttons;
-	vector<IMenu*>   menus;
-	vector<ICursor*> cursors;
-	vector<IWindow*> windows;
-
-	// Create Buttons
-	for (auto item : factories)
-		buttons.push_back(item->CreateButton());
-
-	// Create Menus
-	for (auto item : factories)
-		menus.push_back(item->CreateMenu());
-
-	// Create Cursors
-	for (auto item : factories)
-		cursors.push_back(item->CreateCursor());
-
-	// Create Windows
-	for (auto item : factories)
-		windows.push_back(item->CreateWindow());
-
-	// Show all buttons
-	for (auto item : buttons)
-		item->Press();
-	cout << "-----\n";
-	
-	// Show all menus
-	for (auto item : menus)
-		item->Choice();
-	cout << "-----\n";
-	
-	// Show all cursors
-	for (auto item : cursors)
-		item->Rotate();
-	cout << "-----\n";
-	
-	// Show all windows
-	for (auto item : windows)
-		item->Show();
-	cout << "-----\n";
-	
+	gui.button->Press();
+	gui.cursor->Rotate();
+	gui.menu->Choice();
+	gui.window->Show();
+		
 	return 0;
 }

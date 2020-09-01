@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e736278e-6a8b-483e-9b53-6dd4f4409ed8}</ProjectGuid>
-    <RootNamespace>Task1</RootNamespace>
+    <ProjectGuid>{c477c106-19ed-4d8b-9315-d22e87c538f8}</ProjectGuid>
+    <RootNamespace>Task2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,32 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ComponentsFactory.h" />
-    <ClInclude Include="IButton.h" />
-    <ClInclude Include="ICursor.h" />
-    <ClInclude Include="IMenu.h" />
-    <ClInclude Include="IWindow.h" />
-    <ClInclude Include="LINUXButton.h" />
-    <ClInclude Include="LINUXComponentsFactory.h" />
-    <ClInclude Include="LINUXCursor.h" />
-    <ClInclude Include="LINUXMenu.h" />
-    <ClInclude Include="LINUXWindow.h" />
-    <ClInclude Include="MACButton.h" />
-    <ClInclude Include="MACComponentsFactory.h" />
-    <ClInclude Include="MACCursor.h" />
-    <ClInclude Include="MACMenu.h" />
-    <ClInclude Include="MACWindow.h" />
-    <ClInclude Include="WINDOWSButton.h" />
-    <ClInclude Include="WINDOWSComponentsFactory.h" />
-    <ClInclude Include="WINDOWSCursor.h" />
-    <ClInclude Include="WINDOWSMenu.h" />
-    <ClInclude Include="WINDOWSWindow.h" />
+    <ClInclude Include="BiscuitCakeBuilder.h" />
+    <ClInclude Include="Cake.h" />
+    <ClInclude Include="CakeBuilder.h" />
+    <ClInclude Include="KyivCakeBuilder.h" />
+    <ClInclude Include="Roshen.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BiscuitCakeBuilder.cpp" />
+    <ClCompile Include="Cake.cpp" />
+    <ClCompile Include="KyivCakeBuilder.cpp" />
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="os.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
