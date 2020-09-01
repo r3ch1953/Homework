@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Сomponents">
+      <UniqueIdentifier>{fc405a0a-5e8a-4469-a6ae-b28d005dac18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Сomponents\Menu">
+      <UniqueIdentifier>{965a92a6-95e1-419c-904d-558ee6eaaea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Сomponents\Window">
+      <UniqueIdentifier>{61c731e2-ab14-40c2-bb98-6d3fc84299db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Сomponents\Cursor">
+      <UniqueIdentifier>{7fb9e9c8-af44-4b0a-9cad-2fb4a7e9ed0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Сomponents\Button">
+      <UniqueIdentifier>{c6d2c8f5-973c-4432-aa66-6abe366d619b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factory">
+      <UniqueIdentifier>{5b1a1254-393a-4c1d-95bf-3af6f9c922cf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IButton.h">
+      <Filter>Header Files\Сomponents\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MACButton.h">
+      <Filter>Header Files\Сomponents\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="LINUXButton.h">
+      <Filter>Header Files\Сomponents\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="WINDOWSButton.h">
+      <Filter>Header Files\Сomponents\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="IMenu.h">
+      <Filter>Header Files\Сomponents\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="IWindow.h">
+      <Filter>Header Files\Сomponents\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="ICursor.h">
+      <Filter>Header Files\Сomponents\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="LINUXCursor.h">
+      <Filter>Header Files\Сomponents\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="WINDOWSCursor.h">
+      <Filter>Header Files\Сomponents\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="MACCursor.h">
+      <Filter>Header Files\Сomponents\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="LINUXMenu.h">
+      <Filter>Header Files\Сomponents\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MACMenu.h">
+      <Filter>Header Files\Сomponents\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="WINDOWSMenu.h">
+      <Filter>Header Files\Сomponents\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="WINDOWSWindow.h">
+      <Filter>Header Files\Сomponents\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="MACWindow.h">
+      <Filter>Header Files\Сomponents\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="LINUXWindow.h">
+      <Filter>Header Files\Сomponents\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="LINUXComponentsFactory.h">
+      <Filter>Header Files\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentsFactory.h">
+      <Filter>Header Files\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="MACComponentsFactory.h">
+      <Filter>Header Files\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="WINDOWSComponentsFactory.h">
+      <Filter>Header Files\Factory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
