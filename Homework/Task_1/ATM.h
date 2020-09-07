@@ -1,58 +1,26 @@
 #pragma once
+
+#include "Client.h"
+#include "IAccount.h"
 #include "Account.h"
 
-#include <iostream>
-using namespace std;
-
-class ATM
+class ATM : public IAccount
 {
 private:
-	Account* acc;
+	Client* client;
+	Account* account;
 	bool login;
+
 public:
-	ATM(Account* acc = new Account("1")) : acc(acc) {}
-	~ATM() { delete acc; }
+	ATM(Client* client, Account* account = new Account("id", "password", 0));
 
-	void SetNewAccount(Account* acc) { this->acc = acc; }
-	
-	bool GetLoginStatus() const { return login; }
-	void Login()
-	{
-		if(GetLoginStatus())
-		{
-			cout << "Already logined!\n";
-			return;
-		}
-		
-		string password;
-		cout << "Enter password:\n";
-		cin >> password;
+	void Login(Client* client);
+	void Logout();
+	bool CheckLogined() const;
 
-		if (password == acc->GetPassword())
-		{
-			login = true;
-			cout << "Login successful!\n";
-		}
-		else
-			cout << "Login Failed! Wrong password\n";
-	}
-	void Logout() { login = false; }
-	
-	void PutMoney(int money)
-	{
-		if(!GetLoginStatus())
-			return;
-		
-		acc->PutMoney(money);
-	}
-	void WithdrawMoney(int money)
-	{
-		if(!GetLoginStatus())
-			return;
-		
-		acc->WithdrawMoney(money);
-	}
+	void PutMoney(int money) override;
+	void WithdrawMoney(int money) override;
 
-	void Print() const { acc->Print(); }
+	string Print() const override; 
 };
 

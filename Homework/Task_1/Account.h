@@ -1,48 +1,30 @@
 #pragma once
-#include <iostream>
-#include <vector>
+
+#include "IAccount.h"
 #include <string>
 using namespace std;
 
-class Account
+class Account : public IAccount
 {
 private:
-	int id;
-	int money;
+	string id;
 	string password;
-
-	static vector<int> AccountsID;
+	float money;
 
 public:
-	Account(string password, int money = 0) : password(std::move(password)), money(money)
-	{
-		if (!AccountsID.empty())
-			id = *AccountsID.end() + 1;
-		else
-			id = 1;
+	Account(string id, string password, float money) : id(id), password(password), money(money) {}
 
-		AccountsID.push_back(id);
-	}
+	string GetId() const;
+	string GetPassword() const;
+	float GetMoney() const;
 
-	int GetId() const { return id; }
-	int GetMoney() const { return money; }
-	string GetPassword() const { return password; }
+	void SetId(string id);
+	void SetPassword(string password);
+	void SetMoney(float money);
 	
-	void PutMoney(int money)
-	{
-		this->money += money;
-	}
-	void WithdrawMoney(int money)
-	{
-		if (this->money >= money)
-			this->money -= money;
-	}
-
-	void Print() const
-	{
-		cout << "<--- Account --->\n\n";
-		cout << "ID: " << id << endl;
-		cout << "Money: " << money << endl;
-	}
+	void PutMoney(int money) override;
+	void WithdrawMoney(int money) override;
+	
+	string Print() const override;
 };
 
