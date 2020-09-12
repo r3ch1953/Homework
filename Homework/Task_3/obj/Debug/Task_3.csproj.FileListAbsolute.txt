@@ -1,0 +1,7 @@
+C:\Users\twice\Desktop\Homework\Homework\Task_3\obj\Debug\Task_3.csprojAssemblyReference.cache
+C:\Users\twice\Desktop\Homework\Homework\Task_3\obj\Debug\Task_3.csproj.CoreCompileInputs.cache
+C:\Users\twice\Desktop\Homework\Homework\Task_3\bin\Debug\Task_3.exe.config
+C:\Users\twice\Desktop\Homework\Homework\Task_3\bin\Debug\Task_3.exe
+C:\Users\twice\Desktop\Homework\Homework\Task_3\bin\Debug\Task_3.pdb
+C:\Users\twice\Desktop\Homework\Homework\Task_3\obj\Debug\Task_3.exe
+C:\Users\twice\Desktop\Homework\Homework\Task_3\obj\Debug\Task_3.pdb
