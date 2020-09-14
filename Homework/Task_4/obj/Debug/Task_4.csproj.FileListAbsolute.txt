@@ -1,6 +1,0 @@
-C:\Users\twice\Desktop\Homework\Homework\Task_4\bin\Debug\Task_4.exe.config
-C:\Users\twice\Desktop\Homework\Homework\Task_4\bin\Debug\Task_4.exe
-C:\Users\twice\Desktop\Homework\Homework\Task_4\bin\Debug\Task_4.pdb
-C:\Users\twice\Desktop\Homework\Homework\Task_4\obj\Debug\Task_4.csproj.CoreCompileInputs.cache
-C:\Users\twice\Desktop\Homework\Homework\Task_4\obj\Debug\Task_4.exe
-C:\Users\twice\Desktop\Homework\Homework\Task_4\obj\Debug\Task_4.pdb
