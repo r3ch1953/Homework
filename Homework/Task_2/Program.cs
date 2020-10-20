@@ -18,7 +18,9 @@ namespace Task_2
         {
             form = new Form();
             form.Size = new Size(800, 600);
+
             label = new Label();
+
             pressed = new Dictionary<MouseButtons, int>();
             pressed.Add(MouseButtons.Left, 0);
             pressed.Add(MouseButtons.Right, 0);
