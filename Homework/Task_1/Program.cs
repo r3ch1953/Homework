@@ -15,7 +15,7 @@ namespace Task_1
                 new Question("Struct is value type?", true),
                 new Question("Class is value type?", false),
                 new Question("Struct can implement interfaces?", true),
-                new Question("System call method main?", true),
+                new Question("System call the method Main?", true),
                 new Question("Main takes List<string> args?", false)});
 
             MessageBox.Show($"Your score: {quiz.Run()}/{quiz.Questions.Count}!");
